@@ -106,12 +106,11 @@ class Index extends React.Component {
         {[
           {
             content:
-              'To make your landing page more attractive, use illustrations! Check out ' +
-              '[**unDraw**](https://undraw.co/) which provides you with customizable illustrations which are free to use. ' +
-              'The illustrations you see on this page are from unDraw.',
+              'Equipe pronta par atender, e ajudar no que for preciso, disponibilizando de programadores para ajudar ' +
+              ' ainda mais no processo de correções e implantação de novas funcionalidades ao sistema.',
             image: `${baseUrl}img/undraw_code_review.svg`,
             imageAlign: 'left',
-            title: 'Wonderful SVG Illustrations',
+            title: 'Código Limpo',
           },
         ]}
       </Block>
@@ -122,10 +121,10 @@ class Index extends React.Component {
         {[
           {
             content:
-              'This is another description of how this project is useful',
+              'Aplicativo feito para o cliente, para melhorar ainda mais o atendimento ao usuário.',
             image: `${baseUrl}img/undraw_note_list.svg`,
             imageAlign: 'right',
-            title: 'Description',
+            title: 'Aplicativos iOS e Android',
           },
         ]}
       </Block>
@@ -136,10 +135,10 @@ class Index extends React.Component {
         {[
           {
             content:
-              'Each new Docusaurus project has **randomly-generated** theme colors.',
-            image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
+              'Sistema responsível pode ser aberto em qualquer dispositivo, fácil gerenciamento, treinamento esclusivo e uma dedicação no atendimento.',
+            image: `${baseUrl}img/logo-curso.png`,
             imageAlign: 'right',
-            title: 'Randomly Generated Theme Colors',
+            title: 'Sistema Gestão',
           },
         ]}
       </Block>
@@ -149,16 +148,16 @@ class Index extends React.Component {
       <Block layout="fourColumn">
         {[
           {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/undraw_react.svg`,
+            content: 'App desenvolvido para ajudar o cliente a marcar suas consultas e exames, com agilidade.',
+            image: `${baseUrl}img/smartphone_logo.svg`,
             imageAlign: 'top',
-            title: 'Feature One',
+            title: 'Applicativos Mobile',
           },
           {
-            content: 'The content of my second feature',
-            image: `${baseUrl}img/undraw_operating_system.svg`,
+            content: 'Sistema de Gestão Hospitalar completo, pronto para gerenciar clinicas, laboratóris, hospitais e muito mais.',
+            image: `${baseUrl}img/notebook_logo.png`,
             imageAlign: 'top',
-            title: 'Feature Two',
+            title: 'Sistema Web',
           },
         ]}
       </Block>
