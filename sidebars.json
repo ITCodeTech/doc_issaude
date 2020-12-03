@@ -1,0 +1,10 @@
+{
+  "docs": {
+    "Aplicativo": ["doc1"],
+    "Is Web": ["doc2"],
+    "Gerais": ["doc3"]
+  },
+  "Modo de Uso": {
+    "Informações": ["doc4", "doc5"]
+  }
+}
