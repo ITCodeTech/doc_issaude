@@ -13,16 +13,19 @@
         "title": "Documentação Funcional"
       },
       "doc3": {
-        "title": "Documentação do Sistema"
+        "title": "O que há de Novo"
+      },
+      "doc7": {
+        "title": "Programadores"
+      },
+      "doc9": {
+        "title": "Suporte"
       },
       "doc4": {
         "title": "Documentação Funcional"
       },
       "doc5": {
         "title": "Documentação Técnica"
-      },
-      "login/Indice": {
-        "title": "login/Indice"
       }
     },
     "links": {
@@ -33,6 +36,7 @@
       "Aplicativo": "Aplicativo",
       "Is Web": "Is Web",
       "Gerais": "Gerais",
+      "Equipe": "Equipe",
       "Informações": "Informações"
     }
   },

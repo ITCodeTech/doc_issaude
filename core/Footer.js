@@ -30,36 +30,25 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-            <h5>Docs</h5>
+            <h5>Documentos</h5>
             <a href={this.docUrl('doc1.html')}>
-              Getting Started (or other categories)
+              Breve atualizações
             </a>
-            <a href={this.docUrl('doc2.html')}>Guides (or other categories)</a>
+            <a href={this.docUrl('doc2.html')}>Projetos</a>
             <a href={this.docUrl('doc3.html')}>
-              API Reference (or other categories)
+              API novas Funcionalidades
             </a>
           </div>
           <div>
-            <h5>Community</h5>
-            <a href={`${this.props.config.baseUrl}users`}>User Showcase</a>
-            <a
-              href="https://stackoverflow.com/questions/tagged/"
-              target="_blank"
-              rel="noreferrer noopener">
-              Stack Overflow
-            </a>
-            <a href="https://discordapp.com/">Project Chat</a>
-            <a
-              href="https://twitter.com/"
-              target="_blank"
-              rel="noreferrer noopener">
-              Twitter
-            </a>
+            <h5>Comunidade</h5>
+            <a href="https://www.issaude.com.br/" target="_blank">Nosso Site</a>
+            <a href="https://www.issaude.com.br:8443/isweb/" target="_blank">Sistema Is Web</a>
+            <a href="https://www.issaude.com.br:8443/issaude/" target="_blank">Sistema Is Saúde</a>
           </div>
           <div>
             <h5>More</h5>
             <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
-            <a href="https://github.com/">GitHub</a>
+            <a href="https://github.com/" target="_blank">GitHub</a>
             <a
               className="github-button"
               href={this.props.config.repoUrl}

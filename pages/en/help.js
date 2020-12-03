@@ -41,9 +41,9 @@ function Help(props) {
       <Container className="mainContainer documentContainer postContainer">
         <div className="post">
           <header className="postHeader">
-            <h1>Need help?</h1>
+            <h1>Precisando de Ajuda?</h1>
           </header>
-          <p>This project is maintained by a dedicated group of people.</p>
+          <p>Estaremos prontos para te atender..</p>
           <GridBlock contents={supportLinks} layout="threeColumn" />
         </div>
       </Container>

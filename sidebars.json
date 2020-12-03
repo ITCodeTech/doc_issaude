@@ -2,7 +2,11 @@
   "docs": {
     "Aplicativo": ["doc1"],
     "Is Web": ["doc2"],
-    "Gerais": ["doc3"]
+    "Gerais": ["doc3"],
+    "Equipe": [
+      "doc7",
+      "doc9"
+    ]
   },
   "Modo de Uso": {
     "Informações": ["doc4", "doc5"]
