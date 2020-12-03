@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Aplicativo · IS Saúde</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Aqui você verá a documentção do sistema do aplicativo da IS SAÚDE Gestão Hospitalar, que está disponível para download nas "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Aplicativo · IS Saúde"/><meta property="og:type" content="website"/><meta property="og:url" content="https://ITCodeTech.guigithub.io//doc_issaude/"/><meta property="og:description" content="Aqui você verá a documentção do sistema do aplicativo da IS SAÚDE Gestão Hospitalar, que está disponível para download nas "/><meta property="og:image" content="https://ITCodeTech.guigithub.io//doc_issaude/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://ITCodeTech.guigithub.io//doc_issaude/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/doc_issaude/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/doc_issaude/js/scrollSpy.js"></script><link rel="stylesheet" href="/doc_issaude/css/main.css"/><script src="/doc_issaude/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/doc_issaude/"><img class="logo" src="/doc_issaude/img/favicon.ico" alt="IS Saúde"/><h2 class="headerTitleWithLogo">IS Saúde</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/doc_issaude/docs/doc1" target="_self">Documentação</a></li><li class=""><a href="/doc_issaude/docs/doc4" target="_self">API</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Aplicativo</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Aplicativo</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/doc_issaude/docs/doc1">Documentação Funcional</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Is Web</h3><ul class=""><li class="navListItem"><a class="navItem" href="/doc_issaude/docs/doc2">document number 2</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Gerais</h3><ul class=""><li class="navListItem"><a class="navItem" href="/doc_issaude/docs/doc3">This is document number 3</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Aplicativo</h1></header><article><div><span><p>Aqui você verá a documentção do sistema do aplicativo da IS SAÚDE Gestão Hospitalar, que está disponível para download nas
+plataformas <strong><em>iOS e Android</em></strong>.</p>
+<h2><a class="anchor" aria-hidden="true" id="quem-somos"></a><a href="#quem-somos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Quem somos?</h2>
+<p>Fundado em 2009, a ISGH, criadora do software <strong>IS SAÚDE</strong>, nasce junto ao inicio da implantação do padrão TISS. Padrão este, criado pela agencia nacional de Saúde com o intuito de padronizar codificação e descrição de procedimentos médicos, codificação de material e medicamento hospitalar. Com a frequente dificuldade em encontrar empresas de software com a agilidade necessária para se adaptar ao novo padrão, surgiu a necessidade instintiva em solucionar problemas e entregar faturamento de empresas. Por haver sido desenvolvido por pessoas com grande capacidade e experiência em gerenciamento hospitalar, o Sistema IS SAÚDE segue sempre o caminho mais curto para alcançar o objetivo. Nossos acertos foram ficando cada vez mais pontuais, e a AGILIDADE, passou a ser rotina em nosso aplicativo.</p>
+<h2><a class="anchor" aria-hidden="true" id="descrição-da-documentação"></a><a href="#descrição-da-documentação" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descrição da documentação</h2>
+<h3><a class="anchor" aria-hidden="true" id="o-que-é-oferecido-no-aplicativo"></a><a href="#o-que-é-oferecido-no-aplicativo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>O que é oferecido no Aplicativo</h3>
+<ol>
+<li><strong>Login</strong> (acesso com CPF e Senha)
+<ul>
+<li>link de <strong><em>Esqueceu a Senha</em></strong>  ( Caso o usuário esquece a senha com este link ele consegue gerar uma nova senha de acesso).</li>
+<li>link de <strong><em>Nova Conta</em></strong> ( Com este link o usuário consegue acessar a tela de cadastro de novo usuário).</li>
+<li>Botão <strong><em>Entrar</em></strong> nesse botão possui verificações de segurança, verifica se os dados estão vazios, verifica CPF Válido, se o CPF e a Senha confere. Validações nescessárias para a segurança do aplicativo e do usuário.</li>
+</ul></li>
+<li><strong>Cadastro de Usuário</strong>
+<ul>
+<li>O clinte irá inserir as informações ( <strong><em>Nome Completo, Email, CPF, Data Nascimento, Telefone, Sexo</em></strong> e escolher um Convênio deselado ).</li>
+<li>O cadastro possui validações e campos formatodas como CPF, DATA, e TELEFONE.</li>
+<li>O Servidor retorna as mensagems de validação, Erros e Sucessos dependendo do StatusCode.</li>
+</ul></li>
+<li><strong>Recuperação de  Senhas</strong>
+<ul>
+<li>No recuperar senha, temos um campo para adicionar o CPF, O Servidor recebe o cpf, valida e retorna uma mensagem dizendo que a senha foi enviada para o email.</li>
+<li>No caso de erro por conta de alguma validação retorna uma mensagem do servidor.</li>
+</ul></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="métodos-e-recursos"></a><a href="#métodos-e-recursos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Métodos e Recursos</h2>
+<h4><a class="anchor" aria-hidden="true" id="todas-as-requisições-devem-conter-os-seguintes-headers"></a><a href="#todas-as-requisições-devem-conter-os-seguintes-headers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Todas as requisições devem conter os seguintes HEADERS.</h4>
+<pre><code class="hljs">{
+    &quot;Content-Type&quot;: &quot;application/json&quot;
+    &quot;cnpj&quot;: &quot;CNPJ CLIENTE&quot;
+    &quot;senha&quot;: &quot;Senha de Segurança de Autenticação&quot;
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="endpoint-login-----detalhe"></a><a href="#endpoint-login-----detalhe" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Endpoint Login  -  <a href="">Detalhe</a></h3>
+<pre><code class="hljs">URLBASE/loginPaciente
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="post"></a><a href="#post" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>POST</h4>
+<pre><code class="hljs">{
+    &quot;cpfPaciente&quot;:&quot;&quot;, 
+    &quot;senhaPaciente&quot;:&quot;&quot;
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="retorno"></a><a href="#retorno" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retorno</h4>
+<pre><code class="hljs">{
+    &quot;prontuario&quot;: ,  
+    &quot;telefone&quot;: &quot;&quot;,
+    &quot;primeiro_acesso&quot;: false,
+    &quot;paciente&quot;: &quot;&quot;,
+    &quot;PacienteLogado&quot;: true,
+    &quot;data_nasc&quot;: &quot;&quot;,
+    &quot;email&quot;: &quot;&quot;
+</code></pre>
+<p>}</p>
+<h3><a class="anchor" aria-hidden="true" id="endpoint-cadastro---detalhe"></a><a href="#endpoint-cadastro---detalhe" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Endpoint Cadastro - <a href="">Detalhe</a></h3>
+<pre><code class="hljs">URLBASE/incluirCadastroRapidoPaciente
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="post-1"></a><a href="#post-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>POST</h4>
+<pre><code class="hljs">{
+    &quot;nomePaciente&quot;: &quot;&quot;,
+    &quot;email&quot;: &quot;&quot;,
+    &quot;data_nascimento&quot;: &quot;&quot;,
+    &quot;cpf&quot;: &quot;&quot;,
+    &quot;selectPlano&quot;: &quot;&quot;,
+    &quot;sexo&quot;: &quot;&quot;,
+    &quot;tel_comercial&quot;: &quot;&quot;,
+    &quot;tel_residencial&quot;: &quot;&quot;,
+    &quot;tel_outro&quot;: &quot;&quot;,
+    &quot;tel_celular&quot;: &quot;&quot;,
+    &quot;matricula&quot;: &quot;&quot;,
+    &quot;validade&quot;: &quot;&quot;,
+    &quot;obs&quot;: &quot;Cadastro pelo APP MOBILE&quot;
+</code></pre>
+<p>}</p>
+<h4><a class="anchor" aria-hidden="true" id="mensagem"></a><a href="#mensagem" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mensagem</h4>
+<pre><code class="hljs">    {
+        &quot;idRetorno&quot;: 2,
+        &quot;msgRetorno&quot;: &quot;{mensagem aqui}&quot;
+    }
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="endpoint-recuperar-senha"></a><a href="#endpoint-recuperar-senha" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Endpoint Recuperar Senha</h3>
+<pre><code class="hljs">URLBASE/RecuperarSenhaAPPis
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="post-2"></a><a href="#post-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>POST</h4>
+<pre><code class="hljs">{
+    &quot;cpfPaciente&quot;:&quot;&quot;
+ }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="mensagem-1"></a><a href="#mensagem-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mensagem</h4>
+<pre><code class="hljs">    {
+        &quot;idRetorno&quot;: &quot;10&quot;,
+        &quot;msgRetorno&quot;: &quot;{mensagem aqui}: email*****@gmail.com&quot;
+    }
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="endpoint-dashboard"></a><a href="#endpoint-dashboard" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Endpoint Dashboard</h3>
+<pre><code class="hljs">URLBASE/IniciarApp&amp;prontuario={prontuario}
+URLCORP/servLiberado/corp/{idCorp}
+URLBASE/UltimoAgendamento&amp;idPaciente={prontuario}
+URLBASE/proximoAgendamento&amp;idPaciente={prontuario}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="get"></a><a href="#get" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GET</h4>
+<pre><code class="hljs">GET IniciaApp Retorno
+[
+    {
+        &quot;paciente&quot;: {
+        &quot;prontuario&quot;: ,
+        &quot;paciente&quot;: &quot;&quot;,
+        &quot;filterItems&quot;: [
+            {
+            &quot;idPlano&quot;: &quot;1339&quot;,
+            &quot;nomePlano&quot;: &quot;PARTICULAR&quot;
+            },
+            {
+            &quot;idPlano&quot;: &quot;1340&quot;,
+            &quot;nomePlano&quot;: &quot;UNIMED NORTE/NORDESTE&quot;
+            }
+        ]
+        },
+        &quot;avaliacao&quot;: {
+        &quot;especialidade&quot;: &quot;&quot;,
+        &quot;medico&quot;: &quot;&quot;,
+        &quot;dataAgendamento&quot;: &quot;&quot;,
+        &quot;idAgendamento&quot;: &quot;0&quot;,
+        &quot;local&quot;: &quot;&quot;
+        }
+    }
+]
+ 
+GET CORP Retorno
+ [
+    {
+        &quot;id&quot;: 1,
+        &quot;data_gravacao&quot;: &quot;&quot;,
+        &quot;servicoDisponivel&quot;: {
+        &quot;id&quot;: 1,
+        &quot;descricao&quot;: &quot;&quot;,
+        &quot;acao&quot;: &quot;&quot;,
+        &quot;icone&quot;: &quot;&quot;,          
+        &quot;data_gravacao&quot;: &quot;&quot;
+        },
+        &quot;corp&quot;: {
+        &quot;id&quot;: 1,
+        &quot;nome&quot;: &quot;&quot;,
+        &quot;cnpj&quot;: &quot;&quot;,
+        &quot;link_cliente&quot;: &quot;&quot;,
+        &quot;logo_marca&quot;: &quot;&quot;,
+        &quot;valida_ate&quot;: &quot;&quot;,
+        &quot;aceita_cadastro&quot;: true,
+        &quot;data_gravacao&quot;: &quot;&quot;,
+        &quot;senha&quot;: &quot;&quot;
+        }
+    },
+ ]
+
+ GET ProximoAgendamento
+ {
+    &quot;data_agendamento&quot;: &quot;2020-12-03&quot;,
+    &quot;inicio&quot;: &quot;15:00:00&quot;,
+    &quot;medico&quot;: &quot;Dr. João&quot;,
+    &quot;especialidade&quot;: &quot;ONCOLOGIA&quot;,
+    &quot;idstatus&quot;: &quot;14&quot;,
+    &quot;status&quot;: &quot;Agendada Pelo Paciente&quot;,
+    &quot;id_agendamento&quot;: &quot;518692&quot;
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="mensagem-2"></a><a href="#mensagem-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mensagem</h4>
+<pre><code class="hljs">    {
+        &quot;idRetorno&quot;: &quot;10&quot;,
+        &quot;msgRetorno&quot;: &quot;{mensagem aqui}: email*****@gmail.com&quot;
+    }
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="recursos-útilizados"></a><a href="#recursos-útilizados" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recursos Útilizados</h2>
+<h3><a class="anchor" aria-hidden="true" id="tecnologias-útilizadas"></a><a href="#tecnologias-útilizadas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tecnologias Útilizadas</h3>
+<p>Vejamos algumas tecnologias que foram útilizadas</p>
+<ul>
+<li>[java] - Utilizamos o java na versão 8!</li>
+<li>[IDE] - a ide útilizada é o netbeans</li>
+<li>[Json] - as requisições POST, UPDATE, GET, PUT E DELETE.</li>
+<li>[Twitter Bootstrap] - útilizado para parte de front-end</li>
+<li>[flutter] - útilizado para a parte de mobile</li>
+<li>[git e svn] - versionamento</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="bibliografias"></a><a href="#bibliografias" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Bibliografias</h3>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/doc_issaude/docs/doc2"><span>document number 2</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#quem-somos">Quem somos?</a></li><li><a href="#descrição-da-documentação">Descrição da documentação</a><ul class="toc-headings"><li><a href="#o-que-é-oferecido-no-aplicativo">O que é oferecido no Aplicativo</a></li></ul></li><li><a href="#métodos-e-recursos">Métodos e Recursos</a><ul class="toc-headings"><li><a href="#endpoint-login-----detalhe">Endpoint Login  -  <a href="">Detalhe</a></a></li><li><a href="#endpoint-cadastro---detalhe">Endpoint Cadastro - <a href="">Detalhe</a></a></li><li><a href="#endpoint-recuperar-senha">Endpoint Recuperar Senha</a></li><li><a href="#endpoint-dashboard">Endpoint Dashboard</a></li></ul></li><li><a href="#recursos-útilizados">Recursos Útilizados</a><ul class="toc-headings"><li><a href="#tecnologias-útilizadas">Tecnologias Útilizadas</a></li><li><a href="#bibliografias">Bibliografias</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/doc_issaude/" class="nav-home"><img src="/doc_issaude/img/favicon.ico" alt="IS Saúde" width="66" height="58"/></a><div><h5>Docs</h5><a href="/doc_issaude/docs/doc1.html">Getting Started (or other categories)</a><a href="/doc_issaude/docs/doc2.html">Guides (or other categories)</a><a href="/doc_issaude/docs/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/doc_issaude/users">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/doc_issaude/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/doc_issaude/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 Is Saúde Gestão Hospitalar</section></footer></div></body></html>
